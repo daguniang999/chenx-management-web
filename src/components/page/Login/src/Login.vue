@@ -1,4 +1,5 @@
 <template>
+  <v-app>
     <v-main>
       <v-container style="text-align: center;">
         <v-card elevation="2" style="width: 450px; display: inline-block; margin-top: 200px; padding-top: 20px; text-align: center;">
@@ -34,6 +35,7 @@
         </v-card>
       </v-container>
     </v-main>
+  </v-app>
     
 </template>
 
