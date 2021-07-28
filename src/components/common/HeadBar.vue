@@ -1,12 +1,15 @@
 <template>
   <v-app-bar app>
     <v-app-bar-nav-icon @click="changeDrawer"></v-app-bar-nav-icon>
-    <v-toolbar-title>Application</v-toolbar-title>
+    <v-toolbar-title>
+      <!-- <router-link :to="{name: 'todo'}">TODO</router-link> -->
+      {{ title }}</v-toolbar-title>
   </v-app-bar>
 </template>
 
 <script>
 export default {
+  props: ['title'],
   data() {
     return {
       drawer: true,

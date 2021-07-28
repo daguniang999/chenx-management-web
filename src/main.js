@@ -12,7 +12,9 @@ import 'vuetify/dist/vuetify.min.css';
 import localStorageData from './utils/localStorage.js';
 import loginUtils from './utils/loginUtils.js';
 import store from './store/store.js';
-import windows from './utils/windows.js'; 
+import windows from './utils/windows.js';
+import stringUtils from './utils/stringUtils.js';
+// import { mdiAccount } from '@mdi/js'
 
 
 Vue.config.productionTip = false
@@ -25,6 +27,7 @@ Vue.prototype.$axios = axios;
 Vue.prototype.$localStorage = localStorageData;
 Vue.prototype.$loginUtils = loginUtils;
 Vue.prototype.$windows = windows;
+Vue.prototype.$stringUtils = stringUtils;
 
 /* eslint-disable no-new */
 new Vue({

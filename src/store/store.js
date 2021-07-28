@@ -14,7 +14,7 @@ let store = new Vuex.Store({
     // 自定义方法修改变更store中的数据
     changeDrawer(state, msg) {
       state.drawer = msg;
-      console.log(state.drawer);
+      // console.log(state.drawer);
     }
   },
   actions: {

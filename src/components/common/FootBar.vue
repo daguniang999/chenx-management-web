@@ -3,7 +3,7 @@
         <v-card class="flex"
         flat tile>
         <v-card-title class="teal">
-            <strong class="subheading">Get connected with us on social networks!</strong>
+            <strong class="subheading">Get connected wi</strong>
             <v-spacer></v-spacer>
             <v-btn v-for="icon in icons" :key="icon" class="mx-4"
             dark icon>
