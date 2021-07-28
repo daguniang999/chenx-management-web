@@ -8,12 +8,31 @@ import Home from '../components/common/Home.vue';
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Login',
-      component: Login
+      component: Home,
+      redirect: '/home'
     },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home,
+      redirect: '/home/main',
+      children: [
+        {
+          path: 'main',
+          component: Main,
+          name: 'main'
+        }
+      ]
+    },
+    // {
+    //   path: '/',
+    //   name: 'Login',
+    //   component: Login
+    // },
     {
       path: '/login',
       name: 'Login',
@@ -24,15 +43,15 @@ export default new Router({
       name: 'Test',
       component: Test
     },
-    {
-      path: '/main',
-      name: 'Main',
-      component: Main
-    },
-    {
-      path: '/home',
-      name: 'Home',
-      component: Home
-    },
+    // {
+    //   path: '/main',
+    //   name: 'Main',
+    //   component: Main
+    // },
+    // {
+    //   path: '/home',
+    //   name: 'Home',
+    //   component: Home
+    // },
   ]
 })

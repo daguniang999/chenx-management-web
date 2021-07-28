@@ -12,6 +12,7 @@ import 'vuetify/dist/vuetify.min.css';
 import localStorageData from './utils/localStorage.js';
 import loginUtils from './utils/loginUtils.js';
 import store from './store/store.js';
+import windows from './utils/windows.js'; 
 
 
 Vue.config.productionTip = false
@@ -23,6 +24,7 @@ Vue.use(Vuetify);
 Vue.prototype.$axios = axios;
 Vue.prototype.$localStorage = localStorageData;
 Vue.prototype.$loginUtils = loginUtils;
+Vue.prototype.$windows = windows;
 
 /* eslint-disable no-new */
 new Vue({

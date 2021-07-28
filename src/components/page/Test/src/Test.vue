@@ -14,7 +14,8 @@ export default {
   },
   methods: {
     save() {
-      this.$localStorage.set("name", "tetsts");
+      // this.$localStorage.set("name", "tetsts");
+      console.log('!!!!!!!', this.$loginUtils.test2());
     }
   }
 }

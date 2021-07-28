@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar>
-  </div>
+  <v-app-bar app>
+    <v-app-bar-nav-icon @click="changeDrawer"></v-app-bar-nav-icon>
+    <v-toolbar-title>Application</v-toolbar-title>
+  </v-app-bar>
 </template>
 
 <script>
@@ -15,7 +13,9 @@ export default {
     }
   },
   methods: {
-
+    changeDrawer() {
+      this.$store.commit('changeDrawer', !this.$store.state.drawer);
+    }
   }
 }
 </script>
