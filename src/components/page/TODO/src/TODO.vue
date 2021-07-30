@@ -23,7 +23,7 @@
               <v-icon>mdi-dots-vertical</v-icon>
             </v-btn>
           </template>
-          <v-list>
+          <v-list flat>
             <v-list-item
               v-for="(item, i) in items"
               :key="i">
@@ -33,11 +33,23 @@
         </v-menu>
       </v-app-bar>
 
-      <div style="margin: 10px 0px 0px 20px">
+      <div class="newTaskClass">
         <v-btn icon>
           <v-icon>mdi-plus</v-icon>
         </v-btn>
-        new Task
+        New Task
+      </div>
+
+      <div class="taskListClass">
+        <v-list>
+          <v-list-item v-for="(item, index) in taskList" :key="index" class="taskItemClass">
+              <v-radio
+              :key="index"
+              :label="item.title"
+              :value="item.title"
+            ></v-radio>
+          </v-list-item>
+        </v-list>
       </div>
   </v-card>
   </div>
@@ -63,8 +75,10 @@
           {
             title: 'gcccccccccccfd'
           },
-      
-      
+        ],
+        taskList: [
+          {title: "吃早餐"},
+          {title: "做运动"},
         ]
       }
     },
@@ -76,3 +90,24 @@
     },
   }
 </script>
+
+<style>
+  .newTaskClass {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .newTaskClass:hover {
+     color: #4285f4;
+  }
+
+  .taskListClass {
+    margin-top: 1px;
+  }
+
+  .taskItemClass:hover {
+     box-shadow:rgb(232 232 232) 0px 10px 5px
+  }
+</style>
